@@ -1,4 +1,4 @@
-# Interesting AI Projects
+# AI Agent Projects
 
 Random non-conclusive collection of projects that make use of AI agents.
 
