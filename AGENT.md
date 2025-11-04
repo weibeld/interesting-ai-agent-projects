@@ -16,10 +16,13 @@ Each section should have a table with the following columns:
 ### Column Specifications
 
 **Project:**
-- Format: `**[Project Name](URL)**`
+- Format: `**[Project Name](URL)**` or `**[Project Name](URL)** (by Organization)`
 - Make the link bold
-- If there's a parent organization different from the project name, add it in parentheses: `**[Project Name](URL)** (by Organization)`
-- **CRITICAL:** Pay special attention to the exact spelling of project names, including:
+- **ALWAYS check for parent organization:**
+  - If project has a parent company/organization different from the project name, add it as `(by Organization)`
+  - Examples: `**[NotebookLM](url)** (by Google)`, `**[TRAE](url)** (by ByteDance)`
+  - Check: About page, footer, legal documents, press releases, Wikipedia
+- **CRITICAL:** Pay special attention to the exact spelling of project names:
   - Capitalization (e.g., "Superdesign" not "SuperDesign", "TRAE" not "Trae")
   - Spaces vs. hyphens (e.g., "Project Name" vs. "Project-Name")
   - Special characters or styling
@@ -37,9 +40,12 @@ Each section should have a table with the following columns:
 - Only fix obvious typos if present
 - If the unprocessed item has only a URL, create a single short sentence description
 - Maximum length: 80 characters (if possible)
-- Avoid buzzwords like "AI-powered", "revolutionary", "cutting-edge"
-- Avoid qualitative adjectives like "fast", "powerful", "best", "professional", "amazing"
-- Keep it factual and concise
+- **Avoid all marketing language:**
+  - No buzzwords: "AI-powered", "revolutionary", "cutting-edge", "intelligent", "smart"
+  - No qualitative adjectives: "fast", "powerful", "best", "professional", "amazing", "advanced", "modern"
+  - No marketing modifiers: "adaptive", "seamless", "intuitive", "innovative", "robust", "comprehensive"
+  - Strip these words out completely - e.g., "Adaptive AI IDE" → "IDE", "Intelligent code editor" → "Code editor"
+- Keep it factual and concise - describe what it IS, not how good it is
 - End with a period
 
 **Open-Source:**
@@ -65,9 +71,15 @@ Each section should have a table with the following columns:
 - Format: `[Mon YYYY](source-url)`
 - Example: `[Oct 2025](https://news.ycombinator.com/item?id=12345)`
 - Link to a reliable source documenting the release date
+- **For open-source projects with GitHub repos, check releases/tags FIRST:**
+  - GitHub releases page: `github.com/user/repo/releases`
+  - GitHub tags page: `github.com/user/repo/tags`
+  - Look for v0.01, v0.1, v1.0, or first release/tag - this indicates initial launch date
+  - Use the date of the first release/tag as the launch date
 - **Finding approximate dates is better than "Unknown"**:
   - Look for Product Hunt launch pages (e.g., producthunt.com/products/[name]/launches)
-  - Look for Hacker News launch posts (e.g., "Show HN" or "Launch HN" posts on news.ycombinator.com)
+  - Look for Hacker News INITIAL launch posts (e.g., "Show HN" or "Launch HN" - NOT version updates)
+  - **CRITICAL:** When checking HN/PH posts, verify it's the INITIAL/FIRST launch, not a version announcement (v0.005, v2.0, etc.)
   - Articles dated shortly after launch often indicate launch timeframe
   - Multiple sources saying "recently launched" around the same time period
   - Even if you can't find the exact date, finding the month/year is acceptable
@@ -78,7 +90,7 @@ Each section should have a table with the following columns:
 
 For each unprocessed item, research the following:
 
-### 1. Project Name
+### 1. Project Name and Parent Organization
 - Official name of the project
 - **Verify exact spelling from primary sources:**
   - Check copyright notice on official website (e.g., "©2025 TRAE. All rights reserved.")
@@ -86,7 +98,11 @@ For each unprocessed item, research the following:
   - Look at logo and branding on official site
   - Do NOT rely solely on secondary sources (news articles, blog posts)
 - Verify capitalization, spaces, and hyphens
-- Parent organization (only if different from project name)
+- **Parent organization:**
+  - Check if project has a parent company/organization different from the project name
+  - Common sources: About page, footer, legal documents, press releases
+  - Examples: NotebookLM is by Google, TRAE is by ByteDance
+  - If parent organization exists and differs from project name, add it as "(by Organization Name)"
 
 ### 2. Runtime
 - Determine where/how the project runs:
@@ -109,25 +125,35 @@ For each unprocessed item, research the following:
 - **CRITICAL:** Take extra care when researching release dates
 - **Priority: Find at least the month/year** - this is better than "Unknown"
 - Sources to check (in order of reliability):
-  1. Official launch announcements (company blog, press releases)
-  2. Product Hunt launch page (producthunt.com/products/[name]/launches)
-  3. Hacker News launch posts (search for "Show HN" or "Launch HN" on news.ycombinator.com)
-  4. Wikipedia with cited sources
-  5. News articles dated shortly after launch
-  6. Multiple sources mentioning "recently launched" around the same timeframe
+  1. **For open-source projects:** GitHub releases/tags pages (use date of FIRST release/tag)
+     - `github.com/user/repo/releases`
+     - `github.com/user/repo/tags`
+     - Look for v0.01, v0.1, v1.0, or earliest release
+  2. Official launch announcements (company blog, press releases)
+  3. Product Hunt launch page (producthunt.com/products/[name]/launches)
+  4. Hacker News INITIAL launch posts (search for "Show HN" or "Launch HN")
+     - **CRITICAL:** Verify it's the INITIAL launch, not a version update (v0.005, v2.0, etc.)
+  5. Wikipedia with cited sources
+  6. News articles dated shortly after launch
+  7. Multiple sources mentioning "recently launched" around the same timeframe
 - **Inferring approximate dates is acceptable:**
   - An article from October 2025 about a "newly launched" product → likely Oct 2025
   - Multiple sources in early November saying "launched a few days ago" → likely late Oct or early Nov 2025
   - Being off by a few days or even one month is acceptable
 - Do NOT use company founding dates unless explicitly stated as the release date
-- Link to the most specific source you found (Product Hunt page > Hacker News post > news article > general reference)
+- Do NOT use version announcements (v0.005, v2.0) as launch dates - these are updates, not launches
+- Link to the most specific source you found (GitHub releases > Product Hunt > Hacker News > news article)
 - Only use `Unknown` if absolutely no evidence of launch timeframe exists after exhaustive research
 
 ### 6. Description
 - If text exists after the URL in the bullet point, use it (with typo fixes only)
 - If no text exists, create a concise single-sentence description
-- Avoid marketing language and qualitative adjectives
-- Be factual and neutral
+- **Strip ALL marketing language:**
+  - Remove adjectives: "adaptive", "intelligent", "smart", "advanced", "modern", "powerful"
+  - Focus on WHAT it is, not HOW GOOD it is
+  - Example: "Adaptive AI IDE" → "IDE"
+  - Example: "Intelligent code completion tool" → "Code completion tool"
+- Be factual and neutral - describe function, not quality
 
 ## Research Process
 
@@ -136,16 +162,25 @@ For each unprocessed item, research the following:
    - **Check copyright notice** for official spelling (e.g., "©2025 TRAE. All rights reserved.")
    - Check Terms of Service / Privacy Policy for official company name
    - Look at logo and branding
-3. **Verify release dates** carefully:
-   - Check Product Hunt launch page first (producthunt.com/products/[name]/launches)
-   - Check Hacker News for launch posts (search for "Show HN" or "Launch HN")
+   - Check About page / footer for parent organization
+3. **Check GitHub** (if open-source):
+   - **Use WebFetch on the web interface** (NOT the GitHub API):
+     - `github.com/user/repo` for star count
+     - `github.com/user/repo/releases` for release dates
+     - `github.com/user/repo/tags` for version tags
+   - Look for FIRST release/tag to determine launch date
+   - Get current star count from the main repo page
+4. **Verify release dates** carefully:
+   - For open-source: GitHub releases/tags FIRST (look for earliest release)
+   - Check Product Hunt launch page (producthunt.com/products/[name]/launches)
+   - Check Hacker News for INITIAL launch posts (search for "Show HN" or "Launch HN")
+     - Verify it's the INITIAL launch, not a version update
    - Check Wikipedia with cited sources
    - Look for official blog posts or announcements
    - Search for "launched" or "released" in news articles
    - Look at article publication dates - articles about "newly launched" products indicate timeframe
    - Multiple sources saying "recently launched" around same time indicate approximate launch date
    - Finding month/year is better than saying "Unknown"
-4. **Check GitHub** for repository details and star counts
 
 ## Updating Existing Entries
 
