@@ -6,8 +6,6 @@ Random non-conclusive collection of projects that make use of AI agents.
 
 _**🤖 Content last updated 2025-11-04 by AI.**_
 
-- https://cognition.ai/blog/codemaps: Visualise code bases for understanding and navigation.
-
 ## General
 
 | Project | Description | Open-Source | GitHub | Runtime | Released |
@@ -16,6 +14,8 @@ _**🤖 Content last updated 2025-11-04 by AI.**_
 | **[NotebookLM](https://notebooklm.google/)** (by Google) | Upload sources and ask questions about them. | ❌ | ❌ | 🌍 Web | [Jul 2023](https://en.wikipedia.org/wiki/NotebookLM) |
 
 🤖 Content researched by AI. Last updated 2025-11-04.
+
+- https://cognition.ai/blog/codemaps: Visualise code bases for understanding and navigation.
 
 ## Design/UI/UX
 
