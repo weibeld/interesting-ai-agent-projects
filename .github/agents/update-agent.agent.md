@@ -1,3 +1,7 @@
+name: Update Agent
+description: Researches unprocessed items and updates the README with the results
+---
+
 # AI Agent Instructions: Research and Format Project Entries
 
 ## Overview
@@ -289,7 +293,7 @@ After processing ALL sections in the README:
 
 Note: The star count was updated from ~3.0k to ~3.2k and the date was updated to today.
 
-## Quality Guidelines
+## Quality Guidlines
 
 1. **Accuracy:** All information must be verified from reliable sources
 2. **Consistency:** Follow the exact format specifications
