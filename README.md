@@ -12,7 +12,7 @@ _**🤖 Content last updated 2025-11-06 by AI.**_
 |---------|-------------|-------------|--------|---------|----------|
 | **[Propolis](https://propolis.tech/)** | Swarms of agents simulating users for testing apps. | ❌ | ❌ | 🌍 Web | [Oct 2025](https://news.ycombinator.com/item?id=45762012) |
 | **[NotebookLM](https://notebooklm.google/)** (by Google) | Upload sources and ask questions about them. | ❌ | ❌ | 🌍 Web | [Jul 2023](https://en.wikipedia.org/wiki/NotebookLM) |
-| **[Codemaps](https://cognition.ai/blog/codemaps)** (by Cognition) | Visualise code bases for understanding and navigation. | ❌ | ❌ | 🖥️ Binary | [Nov 2025](https://cognition.ai/blog/codemaps) |
+| **[Codemaps](https://cognition.ai/blog/codemaps)** (by Cognition) | Visualise code bases for understanding and navigation. | ❌ | ❌ | 🧩 Plugin | [Nov 2025](https://cognition.ai/blog/codemaps) |
 
 🤖 Content researched by AI. Last updated 2025-11-06.
 
