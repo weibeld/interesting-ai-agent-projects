@@ -7,7 +7,11 @@ description: Researches unprocessed items and updates the README with the result
 
 ## Overview
 
-Your task is to research and format AI agent project entries in the README.md file. You will process unprocessed items (bullet points with URLs) and convert them into formatted table entries.
+Your task is to research and format AI agent project entries in the README.md file. You will:
+1. Process unprocessed items (bullet points with URLs) and convert them into formatted table entries
+2. Update GitHub star counts for existing entries
+3. Maintain the Table of Contents
+4. Update the last update date
 
 ## Table Format
 
@@ -217,29 +221,44 @@ For existing table entries with GitHub repositories:
 
 A section may contain:
 - **Only unprocessed items** (bullet list): Create a new table
-- **Only processed items** (table): Update star counts and "Last updated" date
+- **Only processed items** (table): Update star counts
 - **Both processed and unprocessed items** (table + bullet list): Add new rows to the existing table
 
 When a table already exists:
 1. Add new rows to the existing table for unprocessed items
 2. Append new entries to the end of the table in the same order as they appear in the bullet list
 3. Remove the bullet points after adding them to the table
-4. The "🤖 Content researched by AI. Last updated YYYY-MM-DD." line already exists below the table
-5. Update the date in that line to today's date
+
+## Table of Contents Maintenance
+
+The README has a "## Contents" section that must be kept up to date:
+
+1. List all level-2 headings (##) in the README, excluding "Contents" itself
+2. Format as markdown links: `- [Section Name](#section-anchor)`
+3. Convert section names to GitHub anchor format:
+   - Lowercase all letters
+   - Replace spaces with hyphens
+   - Remove special characters
+   - Example: "Agent Memory" → `#agent-memory`
+4. Keep it single-level (only ## headings, not ### subheadings)
+
+Example:
+```markdown
+## Contents
+
+- [Agents](#agents)
+- [Agent Memory](#agent-memory)
+```
 
 ## Final Steps
 
-After processing all items in a section:
+After processing all items:
 
-1. Remove the processed bullet points
-2. If no "🤖 Content researched by AI. Last updated YYYY-MM-DD." line exists, add it below the table
-3. If the line already exists, update the date to today's date
-4. Use today's date in ISO format (YYYY-MM-DD)
-
-After processing ALL sections in the README:
-
-1. Update ALL "Last updated" dates below tables to today's date
-2. Update the top-level "Content last updated" line near the beginning of README.md (format: `_**🤖 Content last updated YYYY-MM-DD by AI.**_`) to today's date
+1. Remove all processed bullet points
+2. Update the Table of Contents with all current level-2 sections
+3. Update the top-level line near the beginning of README.md to today's date
+   - Format: `> **✨🤖 Note: the content of this file has been researched by AI. Last update YYYY-MM-DD.**`
+   - Use today's date in ISO format (YYYY-MM-DD)
 
 ## Example Transformations
 
@@ -261,8 +280,6 @@ After processing ALL sections in the README:
 |---------|-------------|-------------|--------|------|----------|
 | **[ExampleTool](https://example.com/tool)** | Helps with testing. | ✅ | [user/example-tool](https://github.com/user/example-tool) (⭐️ ~3.2k) | 💻 CLI Tool | [Mar 2024](https://github.com/user/example-tool/releases) |
 | **[AnotherTool](https://another-tool.io)** | Creates automated workflows for development teams. | ❌ | ❌ | 🌍 Web App | [Jan 2025](https://news.ycombinator.com/item?id=12345) |
-
-🤖 Content researched by AI. Last updated 2025-11-04.
 ```
 
 ### Example 2: Existing Table with New Unprocessed Items
@@ -275,8 +292,6 @@ After processing ALL sections in the README:
 |---------|-------------|-------------|--------|------|----------|
 | **[ExampleTool](https://example.com/tool)** | Helps with testing. | ✅ | [user/example-tool](https://github.com/user/example-tool) (⭐️ ~3.0k) | 💻 CLI Tool | [Mar 2024](https://github.com/user/example-tool/releases) |
 
-🤖 Content researched by AI. Last updated 2025-10-15.
-
 - https://newproject.com
 ```
 
@@ -288,11 +303,9 @@ After processing ALL sections in the README:
 |---------|-------------|-------------|--------|------|----------|
 | **[ExampleTool](https://example.com/tool)** | Helps with testing. | ✅ | [user/example-tool](https://github.com/user/example-tool) (⭐️ ~3.2k) | 💻 CLI Tool | [Mar 2024](https://github.com/user/example-tool/releases) |
 | **[NewProject](https://newproject.com)** | Manages infrastructure deployments. | ✅ | [company/newproject](https://github.com/company/newproject) (⭐️ ~1.8k) | 📊 Desktop App | [Sep 2024](https://newproject.com/blog/launch) |
-
-🤖 Content researched by AI. Last updated 2025-11-04.
 ```
 
-Note: The star count was updated from ~3.0k to ~3.2k and the date was updated to today.
+Note: The star count was updated from ~3.0k to ~3.2k.
 
 ## Quality Guidelines
 
@@ -301,17 +314,17 @@ Note: The star count was updated from ~3.0k to ~3.2k and the date was updated to
 3. **Neutrality:** Avoid promotional language
 4. **Completeness:** Research all required fields
 5. **Verification:** Double-check release dates with reliable sources, but approximate dates (month/year) are better than "Unknown"
-6. **Timeliness:** Update all "Last updated" dates to current date when processing
+6. **Timeliness:** Update the Table of Contents and top-level "Last update" date when processing
 7. **Spelling:** ALWAYS verify exact project name spelling from primary sources (copyright notices, legal documents) - NEVER rely solely on secondary sources like news articles
 8. **Primary Product Focus:** Always identify and describe the MAIN/PRIMARY product, not auxiliary tools - use model knowledge + official website + docs to determine what the core product is
 
 ## Important Notes
 
-- Process ALL unprocessed items in the README (all sections)
+- Process ALL unprocessed items in the README (all sections and subsections)
 - Update star counts for ALL existing GitHub repositories
 - For existing items: ONLY update the GitHub star count, do NOT modify any other fields
-- Update ALL "Last updated" dates to today's date (both at the top of the document and below each table)
-- Update the top-level "Content last updated" line near the beginning of README.md with today's date
+- Update the Table of Contents to reflect all current level-2 sections
+- Update the top-level line near the beginning of README.md with today's date (format: `> **✨🤖 Note: the content of this file has been researched by AI. Last update YYYY-MM-DD.**`)
 - Be especially careful with release date research
 - **CRITICAL:** Always focus on the PRIMARY/MAIN product - check official website homepage and use your model knowledge to identify what the core product is (not auxiliary tools)
 - Maintain consistent formatting throughout
