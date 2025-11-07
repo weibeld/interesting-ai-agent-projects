@@ -2,7 +2,7 @@
 
 Non-conclusive list of projects in the agentic AI world, organised across several categories.
 
-> **✨🤖 Note: the content of this file has been researched by AI. Last update 2025-11-06.**
+> **✨🤖 Note: the content of this file has been researched by AI. Last update 2025-11-07.**
 
 ## Contents
 
@@ -41,14 +41,18 @@ Non-conclusive list of projects in the agentic AI world, organised across severa
 
 ### General
 
-- [Mem0](https://mem0.ai/)
-- [Supermemory](https://supermemory.ai/)
-- [Amazon Bedrock AgentCore Memory](https://aws.amazon.com/bedrock/agentcore/)
-- [myNeutron](https://myneutron.ai/)
-- [Cognee](https://www.cognee.ai/)
+| Project | Description | Open-Source | GitHub | Type | Released |
+|---------|-------------|-------------|--------|------|----------|
+| **[Mem0](https://mem0.ai/)** | Memory layer for AI agents. | ✅ | [mem0ai/mem0](https://github.com/mem0ai/mem0) (⭐️ ~42.8k) | 🧰 SDK | [Mar 2025](https://github.com/mem0ai/mem0/releases) |
+| **[Supermemory](https://supermemory.ai/)** | Memory engine for AI apps with web app and browser extension. | ✅ | [supermemoryai/supermemory](https://github.com/supermemoryai/supermemory) (⭐️ ~13.2k) | 🌍 Web App, 🧩 Plugin/Extension, 🔌 API | [Oct 2025](https://techcrunch.com/2025/10/06/a-19-year-old-nabs-backing-from-google-execs-for-his-ai-memory-startup-supermemory/) |
+| **[Cognee](https://www.cognee.ai/)** | Memory engine using knowledge graphs and vector search. | ✅ | [topoteretes/cognee](https://github.com/topoteretes/cognee) (⭐️ ~8.0k) | 🧰 SDK | [Mar 2024](https://github.com/topoteretes/cognee/releases) |
+| **[Amazon Bedrock AgentCore Memory](https://aws.amazon.com/bedrock/agentcore/)** (by AWS) | Managed memory service for AI agents. | ❌ | ❌ | 🔌 API | [Oct 2025](https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-bedrock-agentcore-available/) |
+| **[myNeutron](https://myneutron.ai/)** | Chrome extension for persistent AI memory across platforms. | ❌ | ❌ | 🧩 Plugin/Extension | [Oct 2025](https://coinedition.com/vanar-launches-myneutron-the-first-decentralized-ai-memory-layer-for-permanent-portable-ai-context/) |
 
 ### Chinese Projects
 
-- [MemOS](https://github.com/MemTensor/MemOS)
+| Project | Description | Open-Source | GitHub | Type | Released |
+|---------|-------------|-------------|--------|------|----------|
+| **[MemOS](https://github.com/MemTensor/MemOS)** | Memory operating system for LLMs. | ✅ | [MemTensor/MemOS](https://github.com/MemTensor/MemOS) (⭐️ ~2.9k) | 🧰 SDK | [Jul 2025](https://github.com/MemTensor/MemOS/releases) |
 
 ⬆️ [Back to Contents](#contents)
