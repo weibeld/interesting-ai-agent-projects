@@ -11,7 +11,7 @@ Your task is to research and format AI agent project entries in the README.md fi
 1. Process unprocessed items (bullet points with URLs) and convert them into formatted table entries
 2. Update GitHub star counts for existing entries
 3. Maintain the Table of Contents
-4. Update the last update date
+4. Update the shields.io badge with the current timestamp
 
 ## Table Format
 
@@ -312,9 +312,11 @@ After processing all items:
    - Use ordered list format (1., 2., etc.)
    - Make section names bold
    - Format: `1. **[Section Name](#section-anchor)**`
-5. Update the top-level line near the beginning of README.md to today's date
-   - Format: `> **✨🤖 The contents of this file have been researched by AI. ✅ Last updated: YYYY-MM-DD.**`
-   - Use today's date in ISO format (YYYY-MM-DD)
+5. Update the shields.io badge at the beginning of README.md with today's date:
+   - Find the line: `![Last Updated](https://img.shields.io/date/TIMESTAMP?label=✅%20Last%20AI%20Update&color=success)`
+   - Calculate today's UNIX timestamp in seconds (use `date +%s` command via Bash tool)
+   - Replace `TIMESTAMP` with the new UNIX timestamp
+   - Example: If today is 2025-11-10, calculate the timestamp and update to: `![Last Updated](https://img.shields.io/date/1762765325?label=✅%20Last%20AI%20Update&color=success)`
 
 ## Final Commit Message Format
 
@@ -333,7 +335,7 @@ Other changes:
 - Updated star counts for N open-source projects
 - Updated Table of Contents
 - Reordered projects by star count and release date
-- Updated last updated date to YYYY-MM-DD
+- Updated shields.io badge timestamp
 ```
 
 ### Important Guidelines
@@ -351,7 +353,7 @@ Other changes:
    - Mention if star counts were updated (and how many projects)
    - Note if Table of Contents was updated
    - Note if projects were reordered
-   - Include the new "last updated" date
+   - Note that the shields.io badge timestamp was updated
 
 4. **Keep it concise but complete**
    - The commit message should be scannable
@@ -373,7 +375,7 @@ Added projects:
 Other changes:
 - Updated star counts for 5 open-source projects
 - Reordered projects by star count and release date
-- Updated last updated date to 2025-11-07
+- Updated shields.io badge timestamp
 ```
 
 ## Example Transformations
@@ -430,7 +432,7 @@ Note: The star count was updated from ~3.0k to ~3.2k.
 3. **Neutrality:** Avoid promotional language (see **Marketing Language Removal** in Core Research Guidelines)
 4. **Completeness:** Research all required fields
 5. **Verification:** Double-check release dates with reliable sources, but approximate dates (month/year) are better than "Unknown"
-6. **Timeliness:** Update the Table of Contents and top-level "Last updated" date when processing
+6. **Timeliness:** Update the Table of Contents and shields.io badge timestamp when processing
 7. **Spelling:** Use **Project Name Spelling Verification** guidelines (see Core Research Guidelines)
 8. **Primary Product Focus:** Use **Primary Product Identification** guidelines (see Core Research Guidelines)
 
@@ -440,7 +442,7 @@ Note: The star count was updated from ~3.0k to ~3.2k.
 - Update star counts for ALL existing GitHub repositories (use **GitHub Data Retrieval Strategy** from Core Research Guidelines)
 - For existing items: ONLY update the GitHub star count, do NOT modify any other fields
 - Update the Table of Contents to reflect all current level-2 sections
-- Update the top-level line near the beginning of README.md with today's date (format: `> **✨🤖 Note: the content of this file has been researched by AI. Last updated YYYY-MM-DD.**`)
+- Update the shields.io badge at the beginning of README.md with today's UNIX timestamp (see Final Steps section for details)
 - Be especially careful with release date research
 - Follow all guidelines in **Core Research Guidelines** section
 - Maintain consistent formatting throughout

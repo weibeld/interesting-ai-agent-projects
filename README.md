@@ -1,8 +1,10 @@
 # Agentic AI Projects
 
+![Last Updated](https://img.shields.io/date/1762678925?label=✅%20Last%20AI%20Update&color=success)
+
 Non-conclusive list of projects in the agentic AI world, organised across several categories.
 
-> **✨🤖 The contents of this file have been researched by AI. ✅ Last updated: 2025-11-09.**
+> **🤖 The content of this file has been mainly researched by AI. Double check, if necessary.** 
 
 ## Contents
 
