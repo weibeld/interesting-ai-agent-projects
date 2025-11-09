@@ -90,8 +90,13 @@ Each section should have a table with the following columns:
 - Example: `[Oct 2025](https://news.ycombinator.com/item?id=12345)`
 - Link to a reliable source documenting the release date
 - **For open-source projects with GitHub repos, check releases/tags FIRST:**
-  - GitHub releases page: `github.com/user/repo/releases`
-  - GitHub tags page: `github.com/user/repo/tags`
+  - **IF you are the GitHub Copilot coding agent AND have `github-mcp-server/list_releases` and `github-mcp-server/list_tags` tools:**
+    - Use `github-mcp-server/list_releases` to get all releases and find the FIRST/oldest one
+    - Use `github-mcp-server/list_tags` to get all tags and find the FIRST/oldest one
+  - **ELSE IF you have other GitHub MCP server tools for releases/tags:** Use those tools
+  - **ELSE:**
+    - Use WebFetch on GitHub releases page: `github.com/user/repo/releases`
+    - Use WebFetch on GitHub tags page: `github.com/user/repo/tags`
   - Look for v0.01, v0.1, v1.0, or first release/tag - this indicates initial launch date
   - Use the date of the first release/tag as the launch date
 - **Finding approximate dates is better than "Unknown"**:
@@ -159,9 +164,14 @@ For each unprocessed item, research the following:
 - **CRITICAL:** Take extra care when researching release dates
 - **Priority: Find at least the month/year** - this is better than "Unknown"
 - Sources to check (in order of reliability):
-  1. **For open-source projects:** GitHub releases/tags pages (use date of FIRST release/tag)
-     - `github.com/user/repo/releases`
-     - `github.com/user/repo/tags`
+  1. **For open-source projects:** GitHub releases/tags (use date of FIRST release/tag)
+     - **IF you are the GitHub Copilot coding agent AND have `github-mcp-server/list_releases` and `github-mcp-server/list_tags` tools:**
+       - Use `github-mcp-server/list_releases` to get all releases and find the FIRST/oldest one
+       - Use `github-mcp-server/list_tags` to get all tags and find the FIRST/oldest one
+     - **ELSE IF you have other GitHub MCP server tools for releases/tags:** Use those tools
+     - **ELSE:**
+       - Use WebFetch on `github.com/user/repo/releases`
+       - Use WebFetch on `github.com/user/repo/tags`
      - Look for v0.01, v0.1, v1.0, or earliest release
   2. Official launch announcements (company blog, press releases)
   3. Product Hunt launch page (producthunt.com/products/[name]/launches)
@@ -214,9 +224,13 @@ For each unprocessed item, research the following:
      - **ELSE IF you have another GitHub MCP server tool:** Use that tool
      - **ELSE:** Use public GitHub API (`https://api.github.com/repos/OWNER/REPO`) OR use WebFetch on the web interface (`github.com/user/repo`)
    - **For release dates:**
-     - Use WebFetch on the web interface:
-       - `github.com/user/repo/releases` for release dates
-       - `github.com/user/repo/tags` for version tags
+     - **IF you are the GitHub Copilot coding agent AND have `github-mcp-server/list_releases` and `github-mcp-server/list_tags` tools:**
+       - Use `github-mcp-server/list_releases` to get all releases and find the FIRST/oldest one
+       - Use `github-mcp-server/list_tags` to get all tags and find the FIRST/oldest one
+     - **ELSE IF you have other GitHub MCP server tools for releases/tags:** Use those tools
+     - **ELSE:**
+       - Use WebFetch on `github.com/user/repo/releases` for release dates
+       - Use WebFetch on `github.com/user/repo/tags` for version tags
      - Look for FIRST release/tag to determine launch date
 5. **Verify release dates** carefully:
    - For open-source: GitHub releases/tags FIRST (look for earliest release)
