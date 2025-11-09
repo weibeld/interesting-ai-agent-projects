@@ -19,7 +19,6 @@ Non-conclusive list of projects in the agentic AI world, organised across severa
 | Project | Description | Open-Source | GitHub | Type | Released |
 |---------|-------------|-------------|--------|------|----------|
 | **[Codemaps](https://cognition.ai/blog/codemaps)** (by Cognition) | Visualise code bases for understanding and navigation. | ❌ | ❌ | 🧩 Plugin/Extension | [Nov 2025](https://cognition.ai/blog/codemaps) |
-| **[Propolis](https://propolis.tech/)** | Swarms of agents simulating users for testing apps. | ❌ | ❌ | 🌍 Web App | [Oct 2025](https://news.ycombinator.com/item?id=45762012) |
 | **[NotebookLM](https://notebooklm.google/)** (by Google) | Upload sources and ask questions about them. | ❌ | ❌ | 🌍 Web App | [Jul 2023](https://en.wikipedia.org/wiki/NotebookLM) |
 
 ### Design/UI/UX
@@ -66,5 +65,6 @@ Non-conclusive list of projects in the agentic AI world, organised across severa
 | **[Swarms](https://www.swarms.ai/)** | Framework for building and deploying agent systems. | ✅ | [kyegomez/swarms](https://github.com/kyegomez/swarms) (⭐️ ~5.4k) | 🧰 SDK | [Nov 2023](https://github.com/kyegomez/swarms/releases) |
 | **[OpenAgents](https://openagents.org/)** | Platform for building networks of collaborative AI agents. | ✅ | [xlang-ai/OpenAgents](https://github.com/xlang-ai/OpenAgents) (⭐️ ~4.6k) | 🌍 Web App | [Oct 2023](https://github.com/xlang-ai/OpenAgents) |
 | **[Eigent](https://www.eigent.ai/)** | Desktop app for building and managing agent workforces. | ✅ | [eigent-ai/eigent](https://github.com/eigent-ai/eigent) (⭐️ ~2.4k) | 📊 Desktop App | [Jul 2025](https://github.com/eigent-ai/eigent/releases) |
+| **[Propolis](https://propolis.tech/)** | Swarms of agents simulating users for testing apps. | ❌ | ❌ | 🌍 Web App | [Oct 2025](https://news.ycombinator.com/item?id=45762012) |
 
 ⬆️ [Back to Contents](#contents)
