@@ -106,12 +106,23 @@ Each section should have a table with the following columns:
 
 ### Primary Product Identification
 
-**CRITICAL:** Identify the PRIMARY/MAIN product, not auxiliary tools:
+**CRITICAL:** Identify the PRIMARY/MAIN product(s), not auxiliary tools:
 - Start with official website - what does the homepage promote?
 - Use your model knowledge - ask yourself "What is [Product Name]?"
 - Check documentation (Docs link) - look for "What is...?", "Introduction", "Quickstart" sections
-- Focus on the main product, not secondary tools
-- Example: TRAE's main product is a Desktop App IDE, even though they also have a separate "Trae Agent" CLI tool
+- **Distinguish between "multiple equal deployment modes" vs "auxiliary/secondary tools":**
+  - **Multiple deployment modes:** Same core product deployable in different ways (e.g., via `--api`, `--web` flags, or Docker modes)
+    - Example: A tool that runs as CLI, API server, or web dashboard - all are primary modes
+    - These should ALL be listed in the Type column
+  - **Auxiliary tools:** Separate tools/utilities in the ecosystem that support the main product
+    - Example: TRAE's main product is a Desktop App IDE, with a separate "Trae Agent" CLI tool as auxiliary
+    - These should NOT be listed - only the main product type
+- **How to identify multiple deployment modes:**
+  - Look for command-line flags that switch modes (e.g., `--api`, `--web`, `--voice`)
+  - Check README/docs for deployment sections showing different "modes" or "run as X"
+  - Docker Compose files with multiple service definitions for the same codebase
+  - If the README presents them as equal alternatives for running the same product, they're deployment modes
+- **Rule:** If a tool genuinely supports multiple PRIMARY interfaces/modes (not just auxiliary tools), list ALL applicable types
 
 ### Project Type Definitions
 
@@ -127,7 +138,9 @@ Use emoji icons based on the type of software:
 - **API vs Web App:** If the main functionality is an API endpoint (accessed programmatically), use API. If the main functionality is a web interface to be used by users, use Web App
 - **SDK vs CLI Tool:** If it's a library/framework for building apps (imported/used as dependency), use SDK. If it's an executable tool run from command line, use CLI Tool
 
-**Multiple types:** If a project supports multiple types, include all applicable emoji icons (e.g., `💻 CLI Tool, 🌍 Web App`)
+**Multiple types:** If a project supports multiple types as primary deployment modes, include all applicable emoji icons (e.g., `💻 CLI Tool, 🔌 API, 🌍 Web App`)
+- List them in the typical order of prominence: Desktop App → CLI Tool → API → Web App → Plugin
+- Example: A tool with `--api` and `--web` flags plus default CLI mode would be: `💻 CLI Tool, 🔌 API, 🌍 Web App`
 
 ### GitHub Star Count Formatting
 
@@ -164,8 +177,9 @@ For each unprocessed item, research the following:
 ### 2. Type
 - Use **Primary Product Identification** guidelines (see Core Research Guidelines above)
 - Use **Project Type Definitions** to determine what TYPE the PRIMARY product is (see Core Research Guidelines above)
-- If the PRIMARY product supports multiple types, list all applicable types
-- Do NOT classify based on auxiliary/secondary tools in the ecosystem
+- **If the project has multiple equal deployment modes** (e.g., CLI, API, Web), list ALL applicable types
+- **Important:** Check README deployment sections, command-line flags (--api, --web, etc.), and Docker Compose files
+- Do NOT classify based on auxiliary/secondary tools in the ecosystem - only primary product modes
 
 ### 3. Open-Source Status
 - Is the code publicly available?
